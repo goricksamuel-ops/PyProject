@@ -31,12 +31,17 @@ def check_record_dupes (df, column_name, output_file_path,output_to_file = False
     else:
         
         if output_to_file:
+            # Create Exceptions File With List of Duplicate Values
             duplicates = df[df[column_name].duplicated(keep="first")][column_name]  
             np.savetxt(
                 output_file_path,
                 duplicates.values,
                 fmt="%s"
             )
+
+            # Clean Dataset 
+            df.drop_duplicates(subset=[column_name],keep="first")
+
 
         return "Field Contains Duplicated Values"
 
