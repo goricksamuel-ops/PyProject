@@ -22,7 +22,7 @@ def check_column_type_consistency (df, column_name, expected_type, sample_size =
 
 
 
-def check_record_dupes (df, column_name, output_file_path,output_to_file = False):
+def check_record_dupes (df, column_name, output_file_path = "",output_to_file = False):
     """ Checks a specified column within a specified data frame for duplicate values. Users can choose to export these duplicate values to a file
     """
 
