@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import re
-from src.definitions.definitions import *
+from codefiles.definitions.definitions import *
 from random import sample
 
 
